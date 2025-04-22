@@ -41,10 +41,6 @@ NLP / Parsing	Regex, Rule-Based Heuristics
 File Handling	PDFs, URLs, .txt
 📦 Requirements
 Install dependencies with:
-
-bash
-Copy
-Edit
 pip install -r requirements.txt
 requirements.txt (sample)
 txt
