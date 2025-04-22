@@ -78,7 +78,7 @@ def extract_relationship_type(relationship_text: str) -> str:
             return parts[-1].strip()
     relationship_patterns = [
         (r'connected to (.*?) as (.*?)$', 2),
-        (r'related to (.*?) in (.*?)$', 2),
+        # (r'related to (.*?) in (.*?)$', 2),
         (r'linked to (.*?) via (.*?)$', 2),
         (r'associated with (.*?) through (.*?)$', 2),
         (r'part of (.*?) as (.*?)$', 2),
@@ -89,7 +89,7 @@ def extract_relationship_type(relationship_text: str) -> str:
         if match:
             return match.group(group_idx).strip()
     if "works for" in relationship_lower or "employee of" in relationship_lower:
-        return "employee"
+        # return "employee"
     elif "located in" in relationship_lower or "based in" in relationship_lower:
         return "location"
     elif "founder of" in relationship_lower:
@@ -165,7 +165,7 @@ def extract_target_entity(relationship_text: str) -> str:
             parts = relationship_lower.split(verb, 1)
             if len(parts) > 1:
                 target = parts[1].strip()
-                target = re.sub(r'\s*as\s+.*$', '', target).strip()
+                # target = re.sub(r'\s*as\s+.*$', '', target).strip()
                 return target
     return ""
 
