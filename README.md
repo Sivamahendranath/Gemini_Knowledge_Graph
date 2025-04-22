@@ -65,7 +65,7 @@ Clone the repository
 bash
 Copy
 Edit
-git clone https://github.com/Sivamahendranath/Knowledge_Graph_with_LLM/blob/main/backup.py
+git clone https://github.com/Sivamahendranath/Gemini_Knowledge_Graph/blob/main/backup.py
 Set up your .env file with the Gemini API key:
 
 ini
