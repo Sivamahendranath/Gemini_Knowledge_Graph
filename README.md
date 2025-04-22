@@ -1,5 +1,3 @@
-# Gemini_Knowledge_Graph
-Gemini_AI_Knowledge_Graph
 # Knowledge_Graph_with_LLM
 Knowledge graph exploration Using the Gemini AI LLM
 🔎 Knowledge Graph Builder & Visualizer
@@ -41,11 +39,9 @@ NLP / Parsing	Regex, Rule-Based Heuristics
 File Handling	PDFs, URLs, .txt
 📦 Requirements
 Install dependencies with:
+
 pip install -r requirements.txt
 requirements.txt (sample)
-txt
-Copy
-Edit
 streamlit
 google-generativeai
 python-dotenv
@@ -58,21 +54,10 @@ Pillow
 🔑 Setup
 Clone the repository
 
-bash
-Copy
-Edit
-git clone https://github.com/Sivamahendranath/Gemini_Knowledge_Graph/blob/main/backup.py
+git clone https://github.com/Sivamahendranath/Knowledge_Graph_with_LLM/blob/main/backup.py
 Set up your .env file with the Gemini API key:
-
-ini
-Copy
-Edit
 GEMINI_API=your_google_gemini_api_key
 Run the app
-
-bash
-Copy
-Edit
 streamlit run app.py
 🧠 How It Works
 User uploads a file or provides a URL.
