@@ -44,22 +44,6 @@ def search_entities(query: str, df: pd.DataFrame) -> pd.DataFrame:
         return df
     query = query.lower()
     query_parts = query.split()
-    def search_row(row):
-        if query in row['entity_name'].lower():
-            return True
-        if pd.notna(row['attributes']) and any(part in row['attributes'].lower() for part in query_parts):
-            return True
-        if pd.notna(row['relationships']) and any(part in row['relationships'].lower() for part in query_parts):
-            return True
-        if 'detailed_attributes' in row and pd.notna(row['detailed_attributes']):
-            try:
-                attrs = json.loads(row['detailed_attributes'])
-                for value in attrs.values():
-                    if isinstance(value, str) and any(part in value.lower() for part in query_parts):
-                        return True
-            except:
-                pass
-        return False
     mask = df.apply(search_row, axis=1)
     return df[mask]
 
